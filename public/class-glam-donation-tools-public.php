@@ -100,4 +100,23 @@ class Glam_Donation_Tools_Public {
 
 	}
 
+	public function fix_wc_nag() {
+
+		return true;
+
+	}
+
+
+	public function fix_woo_custom_cart_button_text( $text ) {
+	  global $product;
+
+	  if ( 1 ) {
+	    $text = 'Donate';
+		if ( 1 || 250 == $product->get_id() )
+	    	$text = 'Donate Now';
+	  }
+	  return $text;
+	}
+
+
 }

@@ -173,6 +173,10 @@ class Glam_Donation_Tools {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
+		$this->loader->add_filter( 'woocommerce_helper_suppress_admin_notices', $plugin_public, 'fix_wc_nag');
+		$this->loader->add_filter( 'woocommerce_order_button_text', $plugin_public, 'fix_woo_custom_cart_button_text');
+
+
 	}
 
 	/**
