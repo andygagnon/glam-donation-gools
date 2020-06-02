@@ -124,7 +124,7 @@ class Glam_Donation_Tools_Public {
     		case 'Add to order' :
 				global $product;
 				$product_id = $product->get_id();
-				$list = array( 10, 250 );
+				$list = array( 10, 250, 182 );
 				if ( in_array( $product_id, $list ) )
 					$translated_text = __( 'Add donation', 'woocommerce' );
     		break;
