@@ -175,6 +175,7 @@ class Glam_Donation_Tools {
 
 		$this->loader->add_filter( 'woocommerce_helper_suppress_admin_notices', $plugin_public, 'fix_wc_nag');
 		$this->loader->add_filter( 'woocommerce_order_button_text', $plugin_public, 'fix_woo_custom_cart_button_text');
+		$this->loader->add_filter( 'gettext', $plugin_public, 'fix_add_to_order_button_text', 20, 3);
 
 
 	}

@@ -118,5 +118,19 @@ class Glam_Donation_Tools_Public {
 	  return $text;
 	}
 
+	public function fix_add_to_order_button_text( $translated_text, $text, $domain ) {
+
+		switch ( $translated_text ) {
+    		case 'Add to order' :
+				global $product;
+				$product_id = $product->get_id();
+				$list = array( 10, 250 );
+				if ( in_array( $product_id, $list ) )
+					$translated_text = __( 'Add donation', 'woocommerce' );
+    		break;
+		}
+	return $translated_text;
+}
+
 
 }
