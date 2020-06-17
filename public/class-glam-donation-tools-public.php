@@ -132,5 +132,16 @@ class Glam_Donation_Tools_Public {
 	return $translated_text;
 }
 
+	public function woocommerce_remove_sidebar( $is_active_sidebar, $index ) {
+
+    if( $index !== "sidebar-1" ) {
+        return $is_active_sidebar;
+    }
+    if( ! is_product() ) {
+        return $is_active_sidebar;
+    }
+    return false;
+}
+
 
 }
